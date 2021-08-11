@@ -1,6 +1,8 @@
 # lexicographical-radix64
 Snippet to convert integers to radix64 strings in lexicographical order.
 
+Useful to generate small date-based ids for NoSQL databases.
+
 Based on this Nejc Jezersek SO answer: https://stackoverflow.com/questions/6213227/fastest-way-to-convert-a-number-to-radix-64-in-javascript/64072170#64072170
 
 ```javascript
