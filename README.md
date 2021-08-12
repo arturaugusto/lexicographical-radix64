@@ -28,3 +28,11 @@ for (var i = 0; i < 100000; i++) {
   }
 }
 ```
+
+Variation for radix128
+
+```javascript
+const digit2 = "-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyzÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ";
+toB128 = x=>x.toString(2).split(/(?=(?:.{7})+(?!.))/g).map(v=>digit2[parseInt(v,2)]).join("")
+fromB128 = x=>x.split("").reduce((s,v,i)=>s=s*128+digit2.indexOf(v),0)
+```
